@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TL Technologies - Digital Contact Card</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        .logo-container {
+            text-align: center;
+            margin-bottom: 25px;
+            padding: 20px;
+        }
+        .logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            object-fit: cover;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .company-name {
+            font-size: 24px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin: 10px 0;
+        }
+        .tagline {
+            color: #666;
+            font-size: 16px;
+            margin: 0;
+        }
+        .info {
+            margin: 25px 0;
+            padding: 0 10px;
+        }
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            padding: 10px;
+            border-radius: 8px;
+            background: #f8f9fa;
+        }
+        .info-item p {
+            margin: 0;
+            padding-left: 10px;
+            color: #444;
+        }
+        .share-button {
+            display: block;
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 500;
+            margin-top: 25px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .share-button:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+            box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);
+        }
+        .divider {
+            height: 1px;
+            background: #eee;
+            margin: 20px 0;
+        }
+        .download-btn {
+            display: block;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 500;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .download-btn:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="logo-container">
+            <img src="/api/placeholder/150/150" alt="TL Technologies Logo" class="logo">
+            <h1 class="company-name">TL Technologies</h1>
+            <p class="tagline">Professional Software Development & Digital Solutions</p>
+        </div>
+        
+        <div class="divider"></div>
+
+        <div class="info">
+            <div class="info-item">
+                <strong>Phone:</strong>
+                <p>+91 8949503218</p>
+            </div>
+            <div class="info-item">
+                <strong>Email:</strong>
+                <p>contact@tltechnologies.in</p>
+            </div>
+            <div class="info-item">
+                <strong>Website:</strong>
+                <p>tltechnologies.net</p>
+            </div>
+        </div>
+
+        <!-- Share Button: WhatsApp -->
+        <a href="whatsapp://send?text=BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3ATechnologies%3BTL%3B%3B%3B%0AFN%3ATL%20Technologies%0AORG%3ATL%20Technologies%0ATITLE%3ASoftware%20Development%20Company%0ATEL%3Btype%3DWORK%3Btype%3DVOICE%3A%2B91%208949503218%0AEMAIL%3Btype%3DWORK%3Acontact%40tltechnologies.in%0AURL%3Ahttps%3A%2F%2Ftltechnologies.in%0AADR%3Btype%3DWORK%3B%3B%3B407%204th%20Floor%20Apex%20Mall%3BLalkothi%2C%20Jaipur%3BRajasthan%3B302015%3BIndia%0ANOTE%3AProfessional%20Software%20Development%20%26%20Digital%20Solutions%20Company%0AEND%3AVCARD" class="share-button">
+            Share Contact on WhatsApp
+        </a>
+
+        <!-- Save Button: Download vCard -->
+        <a href="/public/tl_technologies.vcf" download class="download-btn">
+            Save Contact
+        </a>
+    </div>
+</body>
+</html>
